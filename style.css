@@ -1,0 +1,140 @@
+body{
+    background: #01b2db;
+    margin: 0px;
+    z-index: -1;
+}
+#top{
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 120%;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    position: absolute;
+    left: 50%;
+    margin: 10px 0px;
+    top: 0px;
+    transform: translateX(-50%);
+}
+#shell{
+    width: 25%;
+    max-width: 350px;
+    margin: 15px 50%;
+    text-align: center;
+}
+
+
+#container{
+    height: 30rem;
+    display: block;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+}
+
+#container{
+    width: 100%;
+    transform: rotateX(0deg);
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+}
+
+#shell{
+    left: 50%;
+    perspective: 1400px;
+    transform: translateX(-50%);
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+}
+
+.box{
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -webkit-backface-visibility: visible;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+div#box1{
+    background-image: url("front.png");
+    background-size: cover; 
+    transform: rotate3d(0, 1, 0, 0deg);
+    -webkit-backface-visibility: hidden;
+    z-index: 10;
+}
+
+div#box1_back{
+    background: url("cover2.png");
+    background-repeat: no-repeat;  
+    background-size: contain;
+    transform: rotate3d(0,1,0,0deg);
+    z-index: 0;
+}
+
+div#box2{
+    background: url("2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate3d(0, 1, 0, 0deg);
+    z-index: -1;
+}
+
+#countdown{
+    z-index: -5;
+    width: 100%;
+    text-align: center;
+    margin: 0px auto;
+    position: relative;
+    color: rgb(255, 196, 0);
+    text-shadow: 2px 2px 5px rgba(255,220,23,0.51), -2px 2px 5px rgba(255,13,203,0.51);
+}
+#clock{
+    font-size: 1.6rem;
+}
+
+@media screen and (max-width: 1000px){
+    #shell{
+        width: 29%;
+        margin: 5% 50%;
+    }
+    
+    #container{
+        height: 25rem;
+    }
+
+
+}
+@media screen and (max-width: 480px) {
+    
+    #shell{
+        width: 70%;
+        margin: 10% 60%;
+        height: 30rem;
+        text-align: center;
+    }
+    #container{
+        text-align: center;
+    }
+
+    #container{
+        width: 100%;
+        transform: rotateX(0deg);
+        transform-style: preserve-3d;
+        transition: all 1s ease;
+        -webkit-transition: all 1s ease;
+    }
+    div#box1{
+        background: url("front.png");
+        background-repeat: no-repeat;  
+        background-size: contain;
+        transform: rotate3d(0, 1, 0, 0deg);
+        -webkit-backface-visibility: hidden;
+        z-index: 10;
+    }
+    
+}
