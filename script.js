@@ -10,6 +10,7 @@ function container_move(callback){
 function open_card(){
     if(window.matchMedia("(max-width: 480px)")){
         _("container").style.transform = _("container").style.transform == "rotateX(0deg)" ? "rotateX(0deg)" : "rotateX(0deg)";
+        _("shell").style.transform = _("shell").style.transform == "translateX(0%)" ? "translateX(-50%)" : "translateX(0%)";
     }
     else{
         _("container").style.transform = _("container").style.transform == "rotateX(0deg)" ? "rotateX(0deg)" : "rotateX(0deg)";
@@ -17,7 +18,7 @@ function open_card(){
     }
     _("box1").style.transform = _("box1").style.transform == "rotate3d(0, 1, 0, -180deg)" ? "rotate3d(0, 1, 0, 0deg)" : "rotate3d(0, 1, 0, -180deg)";
     _("box1_back").style.transform = _("box1_back").style.transform == "rotate3d(0, 1, 0, -180deg)" ? "rotate3d(0, 1, 0, 0deg)" : "rotate3d(0, 1, 0, -180deg)";
-
+    
   }
   
   
